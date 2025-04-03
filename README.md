@@ -1,6 +1,6 @@
 # ❄️ Semi-Automated Detection of Landfast Ice Edge & Polynya Movement from Sentinel-2 Imagery
 
-This project provides a **semi-automated method to detect the landfast ice edge and track polynya evolution** using Sentinel-2 imagery, training labels, and a coastline shapefile. The framework combines spectral, texture, and spatial features to classify ice vs. open water and extract meaningful ice-edge boundaries — applicable to *any* coastal Arctic scene, not just Wainwright.
+This project provides a **semi-automated method to detect the landfast ice edge and track polynya evolution** using Sentinel-2 imagery, training labels, and a coastline shapefile. The framework combines spectral, texture, and spatial features to classify ice vs. open water and extract meaningful ice-edge boundaries — applicable to *any* coastal Arctic scene.
 
 ---
 
