@@ -33,12 +33,17 @@ This workflow takes a single Sentinel-2 image and:
 
 ## 🔍 Primary Output
 
-- A **land-masked binary classification** of Sentinel-2 imagery:
+- A **land-masked binary classification raster** from Sentinel-2 imagery:
   - `0 = Open Water` (typically polynyas)
   - `1 = Landfast Ice`
   - `NaN = Land`
 
-- Enables **extraction of the landfast ice edge** and time-series analysis for **polynya movement** when used across multiple dates.
+- A **detected landfast ice edge**, derived from a user-supplied transect file:
+  - Transects are drawn manually every 250 meters in QGIS or another GIS tool.
+  - The script identifies the **first water pixel along each transect** (moving seaward from land).
+  - A pixel is only considered part of the ice edge if it is located **at least 250 meters from the coastline**, ensuring more robust detection and avoiding nearshore misclassifications.
+
+- These ice edge points can be exported or tracked across time-series imagery for change detection and polynya movement analysis.
 
 ---
 
@@ -51,7 +56,10 @@ This workflow takes a single Sentinel-2 image and:
    GeoJSON file with labeled polygon geometries and an `id` field for class.
 
 3. **Coastline Shapefile**  
-   Vector line shapefile representing the coastal boundary for generating the land mask and distance-to-coast features.
+   Vector line shapefile representing the coastal boundary. Used for land masking and generating distance-to-coast features.
+
+4. **Transect Shapefile (Manual Input)**  
+   Manually created line features spaced every 250 meters. These should intersect the ice edge and originate from the coastline. Required for extracting the landfast ice edge.
 
 ---
 
