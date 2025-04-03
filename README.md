@@ -69,3 +69,19 @@ Install required libraries via `pip`:
 
 ```bash
 pip install rasterio numpy matplotlib geopandas shapely scikit-learn scipy scikit-image
+
+
+## 📸 Example Outputs
+
+Below is an example of what this method produces using Sentinel-2 imagery:
+
+### RGB Sentinel-2 Image
+Shows the visual appearance of the ice, water, and land in natural color.
+
+![RGB Image](figures/rgb_image_example.png)
+
+### Ice/Water Classification with Detected Ice Edge
+The red line indicates the landfast ice edge automatically detected using the transect-based approach.
+
+![Ice Edge Classification](figures/classification_map.png)
+
