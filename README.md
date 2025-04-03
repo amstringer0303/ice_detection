@@ -71,6 +71,8 @@ Install required libraries via `pip`:
 pip install rasterio numpy matplotlib geopandas shapely scikit-learn scipy scikit-image
 
 
+---
+
 ## 📸 Example Outputs
 
 Below is an example of what this method produces using Sentinel-2 imagery:
